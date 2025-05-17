@@ -1,0 +1,102 @@
+
+"Formulas and Solutions"
+
+Exponential Distribution
+Formula:
+  PDF: f(x; λ) = λ * e^(-λx), for x ≥ 0
+  Mean: μ = 1 / λ
+  Variance: σ² = 1 / λ²
+
+Solution:
+  What is the chance a machine breaks down within the next 3 hours?
+  λ = 1/5 (mean = 5 hours)
+  P(T ≤ 3) = 1 - e^(-3/5) ≈ 0.4512 (45.1%)
+
+Normal Distribution
+Formula:
+  PDF: f(x; μ, σ) = (1 / (σ√(2π))) * e^(- (x - μ)² / (2σ²))
+  Mean: μ
+  Variance: σ²
+
+Solution:
+  Percent of workers finishing in under 40 mins (μ=45, σ=5)
+  Z = (40 - 45) / 5 = -1
+  P(Z ≤ -1) ≈ 0.1587 (15.9%)
+
+Poisson Distribution
+Formula:
+  PMF: P(X = k) = (e^(-λ) * λ^k) / k!
+  Mean: μ = λ
+  Variance: σ² = λ
+
+Solution:
+  Probability of 3 defects (λ = 2)
+  P(X = 3) ≈ 0.1804 (18.0%)
+
+Binomial Distribution
+Formula:
+  PMF: P(X = k) = C(n, k) * p^k * (1 - p)^(n - k)
+  Mean: μ = np
+  Variance: σ² = np(1 - p)
+
+Solution:
+  90 pass out of 100 with p = 0.95
+  μ = 95, σ ≈ 2.18, Z = -2.29
+  P ≈ 0.0109 (1.1%)
+
+Triangular Distribution
+Formula:
+  PDF varies by x (see earlier definition)
+  Mean: μ = (a + b + c) / 3
+  Variance: σ² = (a² + b² + c² - ab - ac - bc) / 18
+
+Solution:
+  Troubleshooting time: a=10, b=20, c=45
+  Mean = 25 minutes
+
+Lognormal Distribution
+Formula:
+  PDF: f(x; μ, σ) = (1 / (xσ√(2π))) * e^(- (ln(x) - μ)² / (2σ²))
+  Mean: μ' = e^(μ + σ² / 2)
+  Variance: σ'² = (e^(σ²) - 1) * e^(2μ + σ²)
+
+Solution:
+  P(T > 3) when ln(time) ~ N(1, 0.5)
+  Z = 0.197 → P ≈ 0.422 (42.2%)
+
+Gamma Distribution
+Formula:
+  PDF: f(x; k, θ) = (x^(k - 1) * e^(-x/θ)) / (θ^k * Γ(k))
+  Mean: μ = kθ
+  Variance: σ² = kθ²
+
+Solution:
+  Shape=3, θ=10 → mean = 30
+  P(T > 30) ≈ 0.26 (26%)
+
+Beta Distribution
+Formula:
+  PDF: f(x; α, β) = (x^(α - 1) * (1 - x)^(β - 1)) / B(α, β)
+  Mean: μ = α / (α + β)
+  Variance: σ² = (αβ) / ((α + β)² * (α + β + 1))
+
+Solution:
+  α = 4, β = 2 → Mean = 0.667 (66.7%)
+
+Weibull Distribution
+Formula:
+  PDF: f(x; λ, k) = (k / λ) * (x / λ)^(k - 1) * e^(-(x / λ)^k)
+  Mean: μ = λ * Γ(1 + 1/k)
+  Variance: σ² = λ² * [Γ(1 + 2/k) - (Γ(1 + 1/k))²]
+
+Solution:
+  k = 2, λ = 1000 → Mean ≈ 886 hours
+
+Uniform Distribution
+Formula:
+  PDF: f(x) = 1 / (b - a), for a ≤ x ≤ b
+  Mean: μ = (a + b) / 2
+  Variance: σ² = (b - a)² / 12
+
+Solution:
+  1 out of 10 workers gets high-priority task → P = 0.1 (10%)
